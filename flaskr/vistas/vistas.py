@@ -37,6 +37,12 @@ class VistaCancionesUsuario(Resource):
         print(id_usuario)
         return [cancion_schema.dump(cancion) for cancion in Cancion.query.filter(Cancion.usuario == id_usuario).all()]
 
+class VistaCancionesUsuario(Resource):
+
+    def get(self, id_usuario):
+        print(id_usuario)
+        return [cancion_schema.dump(cancion) for cancion in Cancion.query.filter(Cancion.usuario == id_usuario).all()]
+
 
 class VistaCancion(Resource):
 
